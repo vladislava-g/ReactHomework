@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MyInfoComponent from "./componets/MyInfoComponent";
+import App from "./componets/App";
 
-let myInfoComponent = <MyInfoComponent/>;
 
 ReactDOM.render(
-  myInfoComponent,
+  <App />,
   document.getElementById('root')
 );
