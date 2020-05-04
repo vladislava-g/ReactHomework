@@ -22,3 +22,13 @@
     color: #000;
     background-color: #fff;
 }
+
+#navbar{
+    background-color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    color: white;
+    height: 50px;
+    padding-top: 10px;
+}

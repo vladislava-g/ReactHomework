@@ -4,22 +4,3 @@
     display: flex;
 
 }
-
-.joke {
-    margin-top: 40px;
-    margin-left: 80px;
-    width: 300px;
-    height: 200px;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
-}
-
-.joke .question{
-    font-weight: 700;
-    margin-bottom: 20px;
-}
