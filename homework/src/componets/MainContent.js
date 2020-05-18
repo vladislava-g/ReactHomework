@@ -1,16 +1,11 @@
 import React from "react";
-import TodoItem from "./TodoItem.js";
-import todosData from "./todosData";
+import Form from "./Form.js";
 
 function MainContent() {
 
     return (
         <main className="main">
-            {
-                todosData.map((value) => {
-                    return <TodoItem data={value} id={value.id}/>
-                })
-            }
+            <Form/>
         </main>
     );
 }
