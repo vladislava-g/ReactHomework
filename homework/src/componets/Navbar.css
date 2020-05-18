@@ -27,8 +27,19 @@
     background-color: black;
     text-align: center;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1em;
     color: white;
     height: 50px;
     padding-top: 10px;
+}
+
+.authorization{
+    color: royalblue;
+    padding: .2em 1em;
+}
+
+.authorization:hover{
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
 }
