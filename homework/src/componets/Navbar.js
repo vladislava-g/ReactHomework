@@ -13,6 +13,7 @@ function Navbar() {
                 <li><NavLink activeClassName="active" activeStyle={{color: "royalblue"}} to='/planets'>Planets</NavLink></li>
                 <li><NavLink activeClassName="active" activeStyle={{color: "royalblue"}} to='/starships'>Starships</NavLink></li>
                 <li><NavLink activeClassName="active" activeStyle={{color: "royalblue"}} to='/transports'>Transports</NavLink></li>
+                <li><NavLink activeClassName="active" activeStyle={{color: "royalblue"}} to='/marvelcharacters'>Marvel Characters</NavLink></li>
                 <li><Authorization /></li>
             </ul>
         </div>

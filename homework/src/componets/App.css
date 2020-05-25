@@ -18,3 +18,35 @@
 .loader{
     margin: 10px;
 }
+
+.thumbnail{
+    display: block;
+	margin: 10px auto;
+	width: 150px;
+	height: 225px;
+}
+
+.nameCharacter{
+    text-align: center;
+}
+
+.charactersList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    margin-top: 50px;
+    width: 300px;
+    border: 1px solid royalblue;
+    background-color: rgba(65, 105, 225, 0.2);
+    height: 550px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(65, 105, 225,1);
+}
+
+.card:hover{
+    background-color: rgba(65, 105, 225, 0.1);
+    cursor: pointer;
+}
