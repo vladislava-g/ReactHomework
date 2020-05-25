@@ -4,3 +4,17 @@
     display: flex;
 
 }
+
+.listItem{    
+    font-size: x-large;
+    margin: 10px;
+}
+
+.listItem:hover{    
+    color: royalblue;
+    cursor: pointer;
+}
+
+.loader{
+    margin: 10px;
+}
