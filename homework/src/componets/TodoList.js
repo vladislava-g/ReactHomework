@@ -1,68 +1,63 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../style/todoList.css'
+import Flip from 'react-reveal/Flip';
 
-class TodoList extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            newItem: ''
-        }
-    }
+function TodoList(props) {
 
-    handleEvent(event) {
+    let [newItem, setNewItem] = useState('')
+    let [show, setShow] = useState(false);
+
+    useEffect(() => setShow(show = true), [])
+
+    function handleEvent(event) {
         const { value, type, name, id } = event.target;
 
         if (type === 'text') {
-            this.setState({
-                newItem: value
-            })
+            setNewItem(newItem = value)
         } else if (type === 'submit' && name === 'add') {
-            this.props.addItem(this.state.newItem)
-            this.setState({
-                newItem: ''
-            })
+            props.addItem(newItem)
+            setNewItem(newItem = '')
         } else if (type === 'submit' && name === 'remove') {
-            this.props.removeItem(parseInt(id));
+            props.removeItem(parseInt(id));
         } else if (type === 'submit' && name === 'edit') {
-            let newItem = prompt('Edit:', value);
-            if (newItem !== null) {
-                this.props.editItem(newItem, id)
+            let elem = prompt('Edit:', value);
+            if (elem !== null) {
+                props.editItem(elem, id)
             }
         }
-
     }
 
-    render() {
-        return (
-            <div>
-                <div className='noteText'>
+    return (
+        <div>
+            <div className='noteText'>
 
-                    <input type='text'
-                        onChange={(event) => this.handleEvent(event)}
-                        value={this.state.newItem}>
-                    </input>
-                    <button className='btnAdd btn btn-primary'
-                        onClick={(event) => this.handleEvent(event)}
-                        name='add'
-                        variant="primary">
-                        ADD
+                <input type='text'
+                    onChange={(event) => handleEvent(event)}
+                    value={newItem}>
+                </input>
+                <button className='btnAdd btn btn-primary'
+                    onClick={(event) => handleEvent(event)}
+                    name='add'
+                    variant="primary">
+                    ADD
                     </button>
-                </div>
+            </div>
+            <Flip opposite cascade when={show}>
                 <ul className='list'>
                     {
-                        this.props.items.map(item =>
+                        props.items.map(item =>
                             !item.name ? '' :
                                 <li>
                                     <p>{item.name}</p>
                                     <p>{item.date}</p>
                                     <button className='btnRemove btn btn-danger'
-                                        onClick={(event) => this.handleEvent(event)}
+                                        onClick={(event) => handleEvent(event)}
                                         name='remove'
                                         id={item.id}>
                                         REMOVE
                                     </button>
                                     <button className='btnEdit btn btn-info'
-                                        onClick={(event) => this.handleEvent(event)}
+                                        onClick={(event) => handleEvent(event)}
                                         name='edit'
                                         value={item.name}
                                         id={item.id}>
@@ -71,11 +66,9 @@ class TodoList extends React.Component {
                                 </li>)
                     }
                 </ul>
-            </div>
-
-        )
-    }
-
+            </Flip>
+        </div>
+    )
 }
 
 export default TodoList;
