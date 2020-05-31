@@ -1,0 +1,40 @@
+#notesHeader{
+    text-align: center;
+    margin: 20px;
+    font-style: italic;
+    font-family: cursive;
+    color: #8989e7;
+}
+
+.noteText{
+    text-align: center;
+}
+
+.list{
+    text-align: center;
+    padding-left: 0px;
+}
+
+.noteText input[type=text]{
+
+    margin: 30px;
+    width: 30%;
+}
+
+.list li{
+    display: inline-block;
+    margin: 30px;
+    text-align: center;
+    border: 1px solid #e5a5a5;
+    border-radius: 10%;
+    padding: 20px;
+}
+
+.btnRemove,
+.btnEdit{
+    margin: 15px;
+}
+
+.btnAdd{
+    vertical-align: baseline;
+}
